@@ -21,3 +21,6 @@ class GoodsListView(ListView):
     template_name = 'goods_show.html'
     model = MyGoods
     context_object_name = 'goods'
+
+def ajax_test_01(request):
+    return HttpResponse('<h1>AJAX_TESTING<h1>',content_type='text/html')

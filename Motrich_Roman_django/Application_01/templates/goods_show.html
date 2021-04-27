@@ -8,7 +8,17 @@
 
     <h1>{{page_header|default:"Наши товары"}}</h1>
 
-    <table>
+    <button id="ajaxButton">Push me</button>
+
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <table id="testTable1">
         <tr>
             <th>Название</th>
             <th>Цена</th>
@@ -29,9 +39,9 @@
     {%endif%}
     {%endblock%}
 
-    {%block additioal_js%}
-    <script src="{% static ='one_test.js'"></script>
-    {%endblock%}
+{%block additioal_js%}
+    <script src="{%static "one_test.js"%}"></script>
+{%endblock%}
 
 <!DOCTYPE html>
 <html lang="en">
