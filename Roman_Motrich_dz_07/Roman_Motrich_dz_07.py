@@ -7,17 +7,17 @@ class MainWindow(QMainWindow):
 
         # Структура главного окна
         # Создаем меню
-        # self.menu_bar = self.menuBar()з
+        self.menu_bar = self.menuBar()
 
         # Создаем блоки меню
         # Блок меню 'Учет движения товаров'
-        # self.gma_menu = self.menu_bar.addMenu('Учет движения товаров')
-        # self.ro_open_btn = QAction(self)
-        # self.ro_open_btn.setText('Приходный ордер')
-        # self.wo_open_btn = QAction(self)
-        # self.wo_open_btn.setText('Расходный ордер')
-        # self.gma_menu.addAction(self.ro_open_btn)
-        # self.gma_menu.addAction(self.wo_open_btn)
+        self.gma_menu = self.menu_bar.addMenu('Учет движения товаров')
+        self.ro_open_btn = QAction(self)
+        self.ro_open_btn.setText('Приходный ордер')
+        self.wo_open_btn = QAction(self)
+        self.wo_open_btn.setText('Расходный ордер')
+        self.gma_menu.addAction(self.ro_open_btn)
+        self.gma_menu.addAction(self.wo_open_btn)
 
 # Отобразить главное окно
 if __name__ == "__main__":
