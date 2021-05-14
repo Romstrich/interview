@@ -1,0 +1,55 @@
+
+{%extends "base.html"%}
+{%load static %}
+
+{%block title%} Показ товаров{%endblock%}
+    {%block content%}
+ <h2>{% now "Сегодня: j F Y ***** Время H:i"%}</h2>
+
+    <h1>{{page_header|default:"Наши товары"}}</h1>
+
+    <button id="ajaxButton">Push me</button>
+
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <table id="testTable1">
+        <tr>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>Поставщик</th>
+            <th>Дата</th>
+        </tr>
+        {%for item in goods%}
+        <tr>
+            <th>{{item.title}}</th>
+            <th>{{item.price}}</th>
+            <th>{{item.vendor}}</th>
+            <th>{{item.created_at}}</th>
+        </tr>
+    {%endfor%}
+    </table>
+    {%if user.is_authenticated%}
+    <button>Добавить товар</button>
+    {%endif%}
+    {%endblock%}
+
+{%block additioal_js%}
+    <script src="{%static "one_test.js"%}"></script>
+{%endblock%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
